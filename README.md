@@ -4,8 +4,6 @@ This repository implements **CCAD**, a modular framework for performing adversar
 
 The goal is to minimize the cosine similarity between image and text embeddings while maintaining visual imperceptibility and text readability.
 
----
-
 ## Features
 
 * **Collaborative Attack (Mode: C)**: Synchronously optimizes both image pixels and text tokens to find the most effective adversarial pair.
@@ -13,8 +11,6 @@ The goal is to minimize the cosine similarity between image and text embeddings 
 * **BERT-MLM Synonym Replacement**: Uses a Masked Language Model to find candidates that fit the grammatical and semantic context of the sentence.
 * **Semantic Constraint**: Integrates `sentence-transformers` to ensure the adversarial text remains semantically close to the original prompt.
 * **Modular Architecture**: Clean separation between models, utilities, and attack logic.
-
----
 
 ## Project Structure
 
@@ -24,8 +20,6 @@ The goal is to minimize the cosine similarity between image and text embeddings 
 | `utils.py` | Core loss functions (`clip_duel_loss`) and distance metrics. |
 | `attacker.py` | The main `CCAD_Attack` engine implementing PGD and collaborative steps. |
 | `main.py` | Entry point for configuration, data loading, and execution. |
-
----
 
 ## Installation
 
@@ -40,12 +34,7 @@ cd ./CCAD
 2. **Install dependencies**:
 ```bash
 pip install torch torchvision transformers pillow sentence-transformers
-
 ```
-
-
-
----
 
 ## Usage
 
@@ -58,8 +47,6 @@ python main.py
 
 ```
 
-
-
 ### Configuration
 
 You can adjust the attack intensity in `main.py` via the `params` dictionary:
@@ -67,8 +54,6 @@ You can adjust the attack intensity in `main.py` via the `params` dictionary:
 * `epsilon`: The maximum perturbation allowed for pixels (e.g., `2/255.0`).
 * `alpha`/`beta`: Weighting factors for image and text penalties.
 * `gamma`: Balance between semantic similarity and edit distance for text.
-
----
 
 ## Methodology
 
@@ -86,8 +71,6 @@ Where:
 * **Mode "I"**: Updates only the image using PGD gradients.
 * **Mode "T"**: Updates only the text using BERT-based greedy search.
 * **Mode "C"**: Alternates between "I" and "T" steps in each iteration for a collaborative effect.
-
----
 
 ## Expected Output
 
@@ -110,13 +93,10 @@ Best Text:    A picture of a feline gazing ahead.
 
 ```
 
----
-
 ## Requirements
 
 * Python 3.8+
 * PyTorch (CUDA recommended)
 * Transformers (HuggingFace)
 * Sentence-Transformers
-
----
+* Google Colab - GPU T4

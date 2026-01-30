@@ -9,7 +9,7 @@ def main():
     model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32").to(device)
     processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
-    local_image_path = "cat.jpg"
+    local_image_path = "./img/cat.jpg"
     original_text = ["A photo of a cat staring forward."]
 
     try:

@@ -26,15 +26,12 @@ The goal is to minimize the cosine similarity between image and text embeddings 
 1. **Clone the repository**:
 ```bash
 git clone https://github.com/X-SecNLP/CCAD.git
-cd ./CCAD
+cd ./ccad
 
 ```
 
 
 2. **Install dependencies**:
-```bash
-pip install torch torchvision transformers pillow sentence-transformers
-```
 
 ## Usage
 
@@ -78,25 +75,18 @@ Upon execution, the script generates a comparison table showing the attack's eff
 
 ```text
 ===========================================================================
-                  CCAD PGD Attack Result Comparison Table                  
+                          CCAD PGD Attack Result                           
 ===========================================================================
-Metric                 | Initial State        | Historical Best     
+Metric                 | Initial              | Best                
 ---------------------------------------------------------------------------
-Total Loss             | 0.2854               | 0.1120              
-Cosine Sim Loss        | 0.2854               | 0.0845              
-Image Perturb (RI)     | 0.0000               | 0.0078              
-Text Penalty (RT)      | 0.0000               | 0.0150              
+Total Loss             | 0.2765               | 0.5688              
+Cosine Sim Loss        | 0.2765               | 0.1908              
 ---------------------------------------------------------------------------
 Initial Text: A photo of a cat staring forward.
-Best Text:    A picture of a feline gazing ahead.
+Best Text:    A silhouette of a cat staring forward.
 ===========================================================================
-
 ```
 
 ## Requirements
 
-* Python 3.8+
-* PyTorch (CUDA recommended)
-* Transformers (HuggingFace)
-* Sentence-Transformers
 * Google Colab - T4 GPU

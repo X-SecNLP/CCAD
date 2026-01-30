@@ -31,8 +31,8 @@ The goal is to minimize the cosine similarity between image and text embeddings 
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/your-username/ccad-clip-attack.git
-cd ccad-clip-attack
+git clone https://github.com/X-SecNLP/CCAD.git
+cd ./CCAD
 
 ```
 

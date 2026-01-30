@@ -99,4 +99,4 @@ Best Text:    A picture of a feline gazing ahead.
 * PyTorch (CUDA recommended)
 * Transformers (HuggingFace)
 * Sentence-Transformers
-* Google Colab - GPU T4
+* Google Colab - T4 GPU

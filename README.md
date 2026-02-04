@@ -2,16 +2,6 @@
 
 This repository implements **CCAD**, a modular framework for performing adversarial attacks on CLIP (Contrastive Language-Image Pre-training) models. It employs a dual-strategy approach: **Projected Gradient Descent (PGD)** for image perturbations and **BERT-MLM** for context-aware synonym replacement in text.
 
-The goal is to minimize the cosine similarity between image and text embeddings while maintaining visual imperceptibility and text readability.
-
-## Features
-
-* **Collaborative Attack (Mode: C)**: Synchronously optimizes both image pixels and text tokens to find the most effective adversarial pair.
-* **PGD Image Perturbation**: Implements  constrained PGD to ensure image changes remain subtle.
-* **BERT-MLM Synonym Replacement**: Uses a Masked Language Model to find candidates that fit the grammatical and semantic context of the sentence.
-* **Semantic Constraint**: Integrates `sentence-transformers` to ensure the adversarial text remains semantically close to the original prompt.
-* **Modular Architecture**: Clean separation between models, utilities, and attack logic.
-
 ## Project Structure
 
 | File | Description |
@@ -91,7 +81,8 @@ Best Text:    A silhouette of a cat staring forward.
 
 * Google Colab - T4 GPU
 
-# City of Chaos
+----
+
+## Echoes of Tomorrow
 
 ![img](https://github.com/user-attachments/assets/6cefdb8d-1b81-4ebb-82c0-745bd3ec2d4c)
-

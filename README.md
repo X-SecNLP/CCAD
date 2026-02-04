@@ -1,6 +1,7 @@
 # CCAD: Cooperative Cross-modal Adversarial Duel
 
 This repository implements **CCAD**, a modular framework for performing adversarial attacks on CLIP (Contrastive Language-Image Pre-training) models.
+
 It employs a dual-strategy approach: **Projected Gradient Descent (PGD)** for image perturbations and **BERT-MLM** for context-aware synonym replacement in text.
 
 ## Project Structure

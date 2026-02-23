@@ -82,6 +82,7 @@ Best Text:    A silhouette of a cat staring forward.
 
 * Google Colab - T4 GPU
 
+----
 
 ## Formal Robustness Verification
 

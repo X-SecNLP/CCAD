@@ -83,7 +83,7 @@ Best Text:    A silhouette of a cat staring forward.
 * Google Colab - T4 GPU
 
 
-## Formal Robustness Verification (SMT-Powered)
+## Formal Robustness Verification
 
 File: `verification/z3-robust.py`
 

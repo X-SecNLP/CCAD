@@ -82,6 +82,8 @@ Best Text:    A silhouette of a cat staring forward.
 
 * Google Colab - T4 GPU
 
+----
+
 # Formal Robustness Verification (SMT-Powered)
 
 This implementation of **CCAD** integrates an **SMT-based Formal Verification** module using the **Z3 Solver**. Unlike empirical testing (e.g., PGD or FGSM attacks) which only "try" to find errors, this module provides a mathematical guarantee of the model's decision stability.

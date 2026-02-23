@@ -82,25 +82,26 @@ Best Text:    A silhouette of a cat staring forward.
 
 * Google Colab - T4 GPU
 
-----
 
-# Formal Robustness Verification (SMT-Powered)
+## Formal Robustness Verification (SMT-Powered)
+
+File: `verification/z3-robust.py`
 
 This implementation of **CCAD** integrates an **SMT-based Formal Verification** module using the **Z3 Solver**. Unlike empirical testing (e.g., PGD or FGSM attacks) which only "try" to find errors, this module provides a mathematical guarantee of the model's decision stability.
 
-## Overview
+### Overview
 In safety-critical anomaly detection, it is vital to know if a model's "Normal" classification can be flipped by minor input noise. We translate the neural network's **Linear** and **ReLU** operations into first-order logic constraints:
 
 1. **Input Constraints**: Define an $L_\infty$ ball around the input $x$ with radius $\epsilon$.
 2. **Layer Constraints**: Model each neuron as a symbolic variable where $y = \max(0, Wx + b)$.
 3. **Safety Property**: Search for any $x'$ within the $\epsilon$-ball such that $f(x') \geq \text{threshold}$ (False Anomaly).
 
-## Core Features
+### Core Features
 * **Deterministic Bounds**: Mathematically prove that no perturbation exists within the defined range that can deceive the model.
 * **Counter-example Generation**: If the model is vulnerable, Z3 returns the exact feature vector that triggers the failure.
 * **Latent Space Analysis**: Optimized for the CCAD projection head to ensure efficient solving times.
 
-## Usage
+### Usage
 To verify the robustness of your trained CCAD model scoring head:
 
 ```python
